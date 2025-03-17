@@ -256,12 +256,14 @@ function getNextFridayThe13th(date) {
 
   currentDate.setDate(13);
 
-  while (true) {
+  for (let i = 0; i < 24; i += 1) {
     if (currentDate.getDay() === 5 && currentDate > date) {
       return currentDate;
     }
     currentDate.setMonth(currentDate.getMonth() + 1);
   }
+
+  return null;
 }
 
 /**
